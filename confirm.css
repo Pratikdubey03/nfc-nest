@@ -1,0 +1,269 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f7f7f7;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: black;
+    padding: 10px 20px;
+}
+
+.brand {
+    color: white;
+    font-size: 26px;
+    font-weight: bold;
+}
+
+.nav-buttons {
+    position: relative;
+}
+
+.profile-section {
+    color: #f0f0f0;
+    font-size: 28px; 
+    display: flex;
+    align-items: center;
+    position: relative;
+}
+
+.profile-icon {
+    width: 56px; /* Profile icon size */
+    height: 56px;
+    background-color: black; /* Set the background to black */
+    border-radius: 50%;
+    display: inline-block;
+    font-size: 18px; /* Profile icon font size */
+    text-align: center;
+    line-height: 36px; /* Center the icon inside the circle */
+    color: white; /* Set the font color to white */
+    cursor: pointer;
+    overflow: hidden; /* Ensure the image is contained within the circle */
+}
+
+.profile-icon-img {
+    width: 100%; /* Make image fill the entire circle */
+    height: 100%; /* Ensure the image takes the full height */
+    object-fit: cover; /* Maintain aspect ratio while covering the circle */
+    border-radius: 50%; /* Ensure image is also round */
+}
+
+/* Dropdown */
+.dropdown {
+    position: absolute;
+    right: 0;
+    top: 40px; /* Space for the dropdown */
+    display: none;
+    background-color: white;
+    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+}
+
+.profile-section:hover .dropdown, /* Show dropdown on hover over profile section */
+.dropdown:hover {
+    display: block;
+}
+
+.dropdown-content {
+    padding: 10px;
+}
+
+.dropdown-content a {
+    display: block;
+    padding: 10px;
+    text-decoration: none;
+    color: black;
+}
+
+.dropdown-content a:hover {
+    background-color: #ddd;
+}
+
+/* Prevent dropdown from disappearing */
+.profile-section:hover .dropdown,
+.dropdown:hover {
+    display: block;
+}
+
+.confirmation-details {
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    padding: 20px 30px;
+    max-width: 600px;  /* Limit the width of the booking container */
+    width: 100%;
+    text-align: left;
+    margin: 100px auto 0;  /* Center it horizontally and provide space from the navbar */
+}
+
+/* General page layout */
+.page-content {
+    display: flex;
+    justify-content: center;  /* Horizontally center the content */
+    align-items: flex-start;  /* Align content to the top */
+    min-height: 100vh;
+    padding-top: 60px;  /* Add padding for the fixed navbar */
+}
+
+/* Hotel Info Section */
+.hotel-info {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+#hotel-image {
+    width: 300px;
+    height: 250px;
+    object-fit: cover;
+    margin-right: 20px;
+    border-radius: 5px;
+}
+
+#hotel-name {
+    font-size: 24px;
+    font-weight: bold;
+    color: #333;
+}
+
+#start-date-summary,
+#end-date-summary,
+#total-days,
+#room-price,
+#total-price {
+    font-size: 16px;
+    color: #555;
+    margin: 10px 0;
+    line-height: 1.5;
+}
+
+/* Extra Activities Section */
+h3 {
+    font-size: 20px;
+    font-weight: bold;
+    margin-top: 20px;
+    color: #333;
+}
+
+label {
+    font-size: 16px;
+    color: #555;
+    margin-right: 10px;
+    line-height: 1.8;
+}
+
+input[type="checkbox"] {
+    margin-right: 10px;
+}
+
+/* Price Summary */
+#final-price {
+    font-size: 18px;
+    font-weight: bold;
+    color: #333;
+    margin-top: 10px;
+}
+
+/* Confirm Booking Button */
+#confirmBookingBtn {
+    font-size: 18px;
+    color: #fff;
+    background-color: #007bff;
+    border: none;
+    padding: 12px 25px;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 20px;
+    transition: background-color 0.3s ease;
+    width: 100%;
+}
+
+#confirmBookingBtn:hover {
+    background-color: #0056b3;
+}
+
+
+/* Mobile Responsiveness */
+@media screen and (max-width: 600px) {
+    .hotel-info {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    #hotel-image {
+        width: 100%;
+        height: auto;
+        margin-bottom: 20px;
+    }
+
+    .profile-section {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    #confirm-booking {
+        width: auto;
+        padding: 12px 20px;
+    }
+} 
+
+/* Styles for the popup container */
+.popup-container {
+    display: none; /* Hide initially */
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.6); /* Dark background */
+    justify-content: center;
+    align-items: center;
+    z-index: 9999; /* Ensure it is on top */
+}
+
+/* Styles for the popup content */
+.popup-content {
+    background-color: #fff;
+    width: 80%;
+    max-width: 500px;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    position: relative;
+}
+
+/* Close button inside the popup */
+.close-btn {
+    background-color: #f44336;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    position: absolute;
+    top: 10px;
+    right: 10px;
+}
+
+/* Style the input fields */
+input[type="email"],
+input[type="text"] {
+    width: 90%;
+    padding: 12px;
+    margin: 10px 0;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+button[type="submit"] {
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}

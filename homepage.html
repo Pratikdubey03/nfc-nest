@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home - NFCNest</title>
+    <link rel="stylesheet" href="home.css"> <!-- Link to your styles.css file -->
+</head>
+
+<body>
+    <!-- Navbar -->
+    <nav class="navbar">
+        <h1 class="brand">NFCNest</h1>
+        <div class="nav-buttons">
+            <div class="profile-section">
+                <!-- Profile Icon and User Name -->
+                <button id="profile-button" class="profile-icon">
+                    <img src="profile.png" alt="Profile Icon" class="profile-icon-img">
+                </button>
+                <span id="user-name"></span> <!-- Replace with the logged-in user's name -->
+                <div class="dropdown" id="dropdown">
+                    <div class="dropdown-content">
+                        <a href="#">Profile</a>
+                        <a href="index.html">Logout</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Search Bar -->
+    <div class="search-bar">
+        <input type="date" id="start-date" placeholder="Start date" />
+        <input type="date" id="end-date" placeholder="End date" />
+        <input type="text" id="search-room" placeholder="Search Rooms" />
+        <select id="room-type-dropdown">
+            <option value="all">All</option>
+            <option value="deluxe">Deluxe</option>
+            <option value="suite">Suite</option>
+        </select>
+    </div>
+
+    <!-- Hotel Listings -->
+    <div class="hotel-list">
+        <!-- Hotel 1 -->
+        <div class="hotel" data-room-type="deluxe" data-price="1200" data-name="SPOT ON 37669 Hotel Shiva Sai Lodge" data-image="hotel1.jpg">
+            <img class="hotel-image" src="hotel1.jpg" alt="Hotel Image">
+            <div class="hotel-info">
+                <h2>SPOT ON 37669 Hotel Shiva Sai Lodge</h2>
+                <p>Near Regimental Bazaar, Shivaji Nagar, Hyderabad</p>
+                <p>Facilities: Parking, Reception, Free Wifi</p>
+                <p>Max Count: 3</p>
+                <p>Phone: 9989649278</p>
+                <p>Type: Deluxe</p>
+                <div class="hotel-price">
+                    ₹1200 <span>per night</span>
+                </div>
+            </div>
+            <div class="buttons-container">
+                <button class="view-details">View Details</button>
+                <button class="book-now">Book Now</button>
+            </div>
+        </div>
+
+        <!-- Hotel 2 -->
+        <div class="hotel" data-room-type="suite" data-price="2500" data-name="Hotel Taj Vivanta" data-image="hotel2.jpg">
+            <img class="hotel-image" src="hotel2.jpg" alt="Hotel Image">
+            <div class="hotel-info">
+                <h2>Hotel Taj Vivanta</h2>
+                <p>MG Road, Bangalore</p>
+                <p>Facilities: Pool, Gym, Free Wifi, Spa</p>
+                <p>Max Count: 4</p>
+                <p>Phone: 9989649279</p>
+                <p>Type: Suite</p>
+                <div class="hotel-price">
+                    ₹2500 <span>per night</span>
+                </div>
+            </div>
+            <div class="buttons-container">
+                <button class="view-details">View Details</button>
+                <button class="book-now">Book Now</button>
+            </div>
+        </div>
+
+        <!-- Hotel 3 -->
+        <div class="hotel" data-room-type="deluxe" data-price="1500" data-name="The Oberoi, Mumbai" data-image="hotel3.jpg">
+            <img class="hotel-image" src="hotel3.jpg" alt="Hotel Image">
+            <div class="hotel-info">
+                <h2>The Oberoi, Mumbai</h2>
+                <p>Marine Drive, Mumbai</p>
+                <p>Facilities: Pool, Spa, Sea View, Gym</p>
+                <p>Max Count: 2</p>
+                <p>Phone: 9989649280</p>
+                <p>Type: Deluxe</p>
+                <div class="hotel-price">
+                    ₹1500 <span>per night</span>
+                </div>
+            </div>
+            <div class="buttons-container">
+                <button class="view-details">View Details</button>
+                <button class="book-now">Book Now</button>
+            </div>
+        </div>
+
+        <!-- Hotel 4 -->
+        <div class="hotel" data-room-type="suite" data-price="2000" data-name="Leela Palace, Delhi" data-image="hotel4.jpg">
+            <img class="hotel-image" src="hotel4.jpg" alt="Hotel Image">
+            <div class="hotel-info">
+                <h2>Leela Palace, Delhi</h2>
+                <p>Chanakyapuri, New Delhi</p>
+                <p>Facilities: Pool, Lounge, Free Wifi, Spa</p>
+                <p>Max Count: 5</p>
+                <p>Phone: 9989649281</p>
+                <p>Type: Suite</p>
+                <div class="hotel-price">
+                    ₹2000 <span>per night</span>
+                </div>
+            </div>
+            <div class="buttons-container">
+                <button class="view-details">View Details</button>
+                <button class="book-now">Book Now</button>
+            </div>
+        </div>
+
+        <!-- Hotel 5 -->
+        <div class="hotel" data-room-type="deluxe" data-price="1800" data-name="Holiday Inn Express, Chennai" data-image="hotel5.jpg">
+            <img class="hotel-image" src="hotel5.jpg" alt="Hotel Image">
+            <div class="hotel-info">
+                <h2>Holiday Inn Express, Chennai</h2>
+                <p>Mount Road, Chennai</p>
+                <p>Facilities: Breakfast, Gym, Parking</p>
+                <p>Max Count: 3</p>
+                <p>Phone: 9989649282</p>
+                <p>Type: Deluxe</p>
+                <div class="hotel-price">
+                    ₹1800 <span>per night</span>
+                </div>
+            </div>
+            <div class="buttons-container">
+                <button class="view-details">View Details</button>
+                <button class="book-now">Book Now</button>
+            </div>
+        </div>
+
+        <!-- Hotel 6 -->
+        <div class="hotel" data-room-type="deluxe" data-price="1800" data-name="Comfort Stay Inn" data-image="hotel6.jpg">
+            <img class="hotel-image" src="hotel6.jpg" alt="Hotel Image">
+            <div class="hotel-info">
+                <h2>Comfort Stay Inn</h2>
+                <p>Facilities: Parking, Free Wifi, Breakfast</p>
+                <p>Max Count: 4</p>
+                <p>Phone: 9123456789</p>
+                <p>Type: Deluxe</p>
+                <div class="hotel-price">
+                    ₹1800 <span>per night</span>
+                </div>
+            </div>
+            <div class="buttons-container">
+                <button class="view-details">View Details</button>
+                <button class="book-now">Book Now</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Script to handle functionality -->
+    <script src="home.js"></script> <!-- Link to your home.js file -->
+</body>
+</html>

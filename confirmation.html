@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Booking Confirmation - NFCNest</title>
+    <link rel="stylesheet" href="confirm.css">
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+
+</head>
+<body>
+    <!-- Navbar -->
+    <nav class="navbar">
+        <h1 class="brand">NFCNest</h1>
+        <div class="nav-buttons">
+            <div class="profile-section">
+                <button id="profile-button" class="profile-icon">
+                    <img src="profile.png" alt="Profile Icon" class="profile-icon-img">
+                </button>
+                <span id="user-name"></span>
+                <div class="dropdown" id="dropdown">
+                    <div class="dropdown-content">
+                        <a href="#">Profile</a>
+                        <a href="index.html">Logout</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Confirmation Details -->
+    <div class="confirmation-details">
+        <h2>Booking Summary</h2>
+        <div class="hotel-info">
+            <img id="hotel-image" src="" alt="Hotel Image">
+            <div>
+                <h3 id="hotel-name"></h3>
+                <p>Start Date: <span id="start-date-summary"></span></p>
+                <p>End Date: <span id="end-date-summary"></span></p>
+                <p>Number of Nights: <span id="total-days"></span></p>
+                <p>Room Price: ₹<span id="room-price"></span> per night</p>
+                <p>Total Price: ₹<span id="total-price"></span></p>
+            </div>
+        </div>
+
+        <!-- Extra Activities -->
+        <h3>Extra Activities</h3>
+        <div>
+            <label><input type="checkbox" id="spa" value="500"> Spa - ₹500</label><br>
+            <label><input type="checkbox" id="breakfast" value="200"> Breakfast - ₹200</label><br>
+            <label><input type="checkbox" id="airport-transfer" value="800"> Airport Transfer - ₹800</label>
+        </div>
+
+        <p>Total Price with Activities: ₹<span id="final-price"></span></p>
+
+        <button id="confirmBookingBtn">Confirm Booking</button>
+    </div>
+
+    <!-- Slide-up Popup (Initially hidden) -->
+    <div id="emailPopup" class="popup-container">
+        <div class="popup-content">
+            <h3>Enter Your Email Details</h3>
+            <form id="emailForm">
+                <label for="email">Email Address:</label>
+                <input type="email" id="email" name="email" required>
+                
+                <label for="name">Full Name:</label>
+                <input type="text" id="name" name="name" required>
+                
+                <label for="phone">Phone Number:</label>
+                <input type="text" id="phone" name="phone" required>
+                
+                <button type="submit">Submit</button>
+            </form>
+            <button id="closePopupBtn" class="close-btn">Close</button>
+        </div>
+    </div>
+
+    <!-- Script to handle functionality -->
+    <script src="confirm.js"></script>
+</body>
+</html>

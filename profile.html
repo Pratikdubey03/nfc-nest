@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profile - NFCNest</title>
+    <link rel="stylesheet" href="profile.css"> <!-- Link to your styles.css file -->
+</head>
+<body>
+    <!-- Navbar -->
+    <nav class="navbar">
+        <h1 class="brand">NFCNest</h1>
+        <div class="nav-buttons">
+            <div class="profile-section">
+                <!-- Profile Icon and User Name -->
+                <button id="profile-button" class="profile-icon">
+                    <img src="profile.png" alt="Profile Icon" class="profile-icon-img">
+                </button>
+                <span id="user-name"></span> <!-- Replace with the logged-in user's name -->
+                <div class="dropdown" id="dropdown">
+                    <div class="dropdown-content">
+                        <a href="#">Profile</a>
+                        <a href="index.html">Logout</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Profile Section -->
+    <div class="profile-container">
+        <h2>Your Bookings</h2>
+
+        <!-- Current Bookings -->
+        <div class="booking-section">
+            <h3>Current Bookings</h3>
+            <div id="current-bookings"></div>
+        </div>
+
+        <!-- Past Bookings -->
+        <div class="booking-section">
+            <h3>Past Bookings</h3>
+            <div id="past-bookings"></div>
+        </div>
+    </div>
+
+
+
+    <script src="profile.js"></script>
+</body>
+</html>

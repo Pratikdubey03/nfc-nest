@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Panel - NFCNest</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header class="navbar">
+        <img src="assets/logo.png" alt="NFCNest Logo" class="logo">
+    </header>
+    <main class="form-container">
+        <h2>Admin Login</h2>
+        <form id="mfaForm">
+            <input type="email" placeholder="Email" required><br>
+            <input type="password" placeholder="Password" required><br>
+            <button type="button" id="getOtp">Get OTP</button><br>
+            <input type="text" placeholder="Enter OTP" id="otpInput" style="display:none;"><br>
+            <button type="submit" id="submitBtn" style="display:none;">Submit</button>
+        </form>
+    </main>
+    <script src="admin.js"></script>
+</body>
+</html>

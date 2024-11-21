@@ -1,0 +1,125 @@
+/* General Body Styles */
+body {
+    margin: 0;
+    padding: 0;
+    background-color: black; /* Black background */
+    color: white; /* White text */
+    font-family: 'Arial', sans-serif;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    overflow: hidden;
+}
+
+/* Full container styling */
+.container {
+    width: 100%;
+    max-width: 1200px;
+    padding: 20px;
+    text-align: center;
+}
+
+/* Navbar */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    padding: 10px 20px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    box-sizing: border-box;
+}
+
+.brand {
+    font-size: 18px;
+    font-weight: bold;
+    color: white;
+}
+
+/* Login/Register Buttons */
+.nav-buttons {
+    display: flex;
+    gap: 10px;
+}
+
+.nav-btn {
+    text-decoration: none;
+    background-color: white;
+    color: black;
+    padding: 8px 15px;
+    font-size: 14px;
+    font-weight: bold;
+    border-radius: 5px;
+    transition: all 0.3s ease;
+}
+
+.nav-btn:hover {
+    background-color: #333;
+    color: white;
+}
+
+/* Main Content Styles */
+.main-content {
+    margin-top: 100px;
+}
+
+.title {
+    font-size: 64px;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+.subtitle {
+    font-size: 18px;
+    font-style: italic;
+    margin-bottom: 40px;
+}
+
+/* Get Started Button */
+.get-started-btn {
+    background-color: white;
+    color: black;
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    font-weight: bold;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.get-started-btn:hover {
+    background-color: #333;
+    color: white;
+}
+
+/* ... other styles ... */
+
+/* Main Content Styles */
+.main-content {
+    margin-top: 100px;
+  }
+  
+  .title {
+    font-size: 48px; /* Initial size */
+    font-weight: bold;
+    margin-bottom: 20px;
+    animation: pulse 3s infinite alternate; /* Add animation */
+  }
+  
+  @keyframes pulse {
+    0% {
+      font-size: 48px;
+      transform: scale(1);
+    }
+    100% {
+      font-size: 102px;
+      transform: scale(1.1);
+    }
+  }
+
+

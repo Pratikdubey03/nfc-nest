@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Panel - Add Rooms</title>
+    <link rel="stylesheet" href="admin-acc.css">
+</head>
+<body>
+    <div class="navbar">
+        <div class="brand">NFCNest</div>
+        <div class="profile-section">
+            <span class="profile-icon">
+                <img src="profile.png" alt="Profile Icon">
+            </span>
+        </div>
+    </div>
+    
+    <div class="admin-panel">
+        <h1>Admin Panel</h1>
+        <div class="tabs">
+            
+            <button class="active-tab">Add Room</button>
+            
+        </div>
+
+        <div class="add-room-form">
+            <form id="add-room">
+                <div class="form-group">
+                    <input type="text" id="name" placeholder="Name" required>
+                    <input type="text" id="rentperday" placeholder="Rent Per Day" required>
+                    <input type="number" id="maxcount" placeholder="Max Count" required>
+                    <input type="text" id="description" placeholder="Description" required>
+                    <input type="text" id="phonenumber" placeholder="Phone Number" required>
+                </div>
+                <div class="form-group">
+                    <input type="text" id="type" placeholder="Type" required>
+                    <input type="text" id="imageurl1" placeholder="Image URL 1" required>
+                    <input type="text" id="imageurl2" placeholder="Image URL 2" required>
+                    <input type="text" id="imageurl3" placeholder="Image URL 3" required>
+                </div>
+                <button type="submit" class="add-room-btn">Add Room</button>
+            </form>
+        </div>
+
+        <div class="room-list">
+            <h2>Added Rooms</h2>
+            <div id="rooms-container"></div>
+        </div>
+    </div>
+
+    <script src="admin-acc.js"></script>
+</body>
+</html>
